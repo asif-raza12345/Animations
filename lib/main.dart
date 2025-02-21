@@ -1,7 +1,10 @@
 import 'package:anmations_controll/animations/controller.dart';
 import 'package:flutter/material.dart';
 
-import 'animations/AnimatedCrossFade/CrossFade.dart';
+import 'animations/AnimatedCrossFade/AnimatedSwitcher.dart';
+import 'animations/AnimatedCrossFade/Card.dart';
+import 'animations/AnimatedCrossFade/changMode.dart';
+import 'animations/AnimatedOpacity/fadein_out.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Crossfade()
+      home:AnimatedOpacityExample()
     );
   }
 }
