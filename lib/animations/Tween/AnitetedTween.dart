@@ -7,45 +7,30 @@ class Anitetedtween extends StatefulWidget {
   State<Anitetedtween> createState() => _AnitetedtweenState();
 }
 
+double end = 200;
+double begin = 50;
+
+
+
 class _AnitetedtweenState extends State<Anitetedtween> {
-  double end = 1;
-  void _Tweenit(){
-    setState(() {
-      if(end == 1){
-        end ==0;
-      }else{
-        end = 1;
-      }
-    });
-  }
+
   @override
   Widget build(BuildContext context) {
-    Tween<double> tween = Tween(begin: 0.0 , end: end);
+    Tween<double> tween = Tween<double>(begin: 0.0, end: end);
     return Scaffold(
-      appBar: AppBar(
-        title: Text("TweenAnimations"),
-        backgroundColor: Colors.blue,
-      ),
+      appBar: AppBar(title: Text("TweenAnimationBuilder Example")),
       body: Center(
-        child:Column(
-          children: [
-            TweenAnimationBuilder(
-                tween: tween,
-                duration: Duration(seconds: 1),
-                builder: (context, value ,child) => Opacity(
-                    opacity: value,
-                  child: child,
-                ),
-              child: Container(
-                height: 200,
-                width: 300,
-                  color: Colors.blue,
-              ),
-            ),
-            ElevatedButton(
-                onPressed: _Tweenit,
-                child: Text("press it"))
-          ],
+        child: TweenAnimationBuilder<double>(
+          tween: Tween<double>(begin: begin, end: end),
+          duration: Duration(seconds: 2),
+          curve: Curves.bounceInOut,
+          builder: (context, value, child) {
+            return Container(
+              width: value,
+              height: value,
+              color: Colors.green,
+            );
+          },
         ),
       ),
     );
