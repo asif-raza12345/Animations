@@ -5,6 +5,7 @@ import 'animations/AnimatedCrossFade/AnimatedSwitcher.dart';
 import 'animations/AnimatedCrossFade/Card.dart';
 import 'animations/AnimatedCrossFade/changMode.dart';
 import 'animations/AnimatedOpacity/fadein_out.dart';
+import 'animations/SinglTickerProvider/Benten.dart';
 import 'animations/Stack/Animatedposition.dart';
 import 'animations/Stack/ChangeMode.dart';
 import 'animations/Tween/AnitetedTween.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Changemode()
+      home:Benten()
     );
   }
 }
