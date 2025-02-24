@@ -45,7 +45,10 @@ class _BentenState extends State<Benten> with SingleTickerProviderStateMixin {
   }
   @override
   Widget build(BuildContext context) {
+    double Screenheight = MediaQuery.of(context).size.height;
+    double Screenwidth = MediaQuery.of(context).size.width;
     return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -59,36 +62,76 @@ class _BentenState extends State<Benten> with SingleTickerProviderStateMixin {
                     Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                   CircleAvatar(
-                     radius: 50,
-                     backgroundColor: Colors.blueAccent,
-                   ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundColor: Colors.black,
-                    )
+                  Container(
+                    height: Screenheight * 0.20,
+                    width: Screenwidth *0.20,
+                    decoration: BoxDecoration(
+                      color: Colors.purple,
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        width: 2,
+                        color: Colors.yellow
+                      )
+                    ),
+                  ),
+                        Container(
+                          height: Screenheight * 0.20,
+                          width: Screenwidth *0.20,
+                          decoration: BoxDecoration(
+                              color: Colors.red,
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                  width: 2,
+                                  color: Colors.yellow
+                              )
+                          ),
+                        ),
                   ],
                 ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CircleAvatar(
-                          radius: 50,
-                          backgroundColor: Colors.yellow,
-                        )
+                        Container(
+                          height: Screenheight * 0.20,
+                          width: Screenwidth *0.20,
+                          decoration: BoxDecoration(
+                              color: Colors.yellow,
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                  width: 2,
+                                  color: Colors.yellow
+                              )
+                          ),
+                        ),
                       ],
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CircleAvatar(
-                          radius: 50,
-                          backgroundColor: Colors.brown,
+                        Container(
+                          height: Screenheight * 0.20,
+                          width: Screenwidth *0.20,
+                          decoration: BoxDecoration(
+                              color: Colors.brown,
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                  width: 2,
+                                  color: Colors.yellow
+                              )
+                          ),
                         ),
-                        CircleAvatar(
-                          radius: 50,
-                          backgroundColor: Colors.green,
-                        )
+                        Container(
+                          height: Screenheight * 0.20,
+                          width: Screenwidth *0.20,
+                          decoration: BoxDecoration(
+                              color: Colors.green,
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                  width: 2,
+                                  color: Colors.yellow
+                              )
+                          ),
+                        ),
                       ],
                     ),
           ]
