@@ -5,6 +5,7 @@ import 'animations/AnimatedCrossFade/AnimatedSwitcher.dart';
 import 'animations/AnimatedCrossFade/Card.dart';
 import 'animations/AnimatedCrossFade/changMode.dart';
 import 'animations/AnimatedOpacity/fadein_out.dart';
+import 'animations/AnimationDownload/Download_animation.dart';
 import 'animations/SinglTickerProvider/Benten.dart';
 import 'animations/SinglTickerProvider/TransitionScale.dart';
 import 'animations/Stack/Animatedposition.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:BoxesRotation()
+      home:DownloadAnimation()
     );
   }
 }
